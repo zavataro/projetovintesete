@@ -23,7 +23,7 @@
               }
             },
             "outputPath": {
-              "base": "dist/projetovintesete",
+              "base": "dist/",
               "browser": ""
             },
             "index": "src/index.html",
