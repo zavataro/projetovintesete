@@ -6,16 +6,16 @@ import { CommonSvgIconsComponent } from '../common-svg-icons/common-svg-icons.co
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 import { SearchComponent } from './search/search.component';
 import { NotificationsComponent } from './notifications/notifications.component';
-import { ChatComponent } from './chat/chat.component';
-import { ModeComponent } from './mode/mode.component';
-import { CartComponent } from './cart/cart.component';
+//import { ChatComponent } from './chat/chat.component';
+//import { ModeComponent } from './mode/mode.component';
+//import { CartComponent } from './cart/cart.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @Component({
     selector: 'app-header',
     imports: [CommonModule, RouterModule, CommonSvgIconsComponent,
         BreadcrumbComponent, SearchComponent, NotificationsComponent,
-        ChatComponent, ModeComponent, CartComponent, ProfileComponent],
+        ProfileComponent],// ChatComponent, ModeComponent, CartComponent],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
