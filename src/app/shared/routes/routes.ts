@@ -7,7 +7,7 @@ export const content: Routes = [
       loadChildren: () => import('../../components/simple-page/simple-page.routes'),
       data: {
         title: "Pages",
-        breadcrumb: "Pages",
+        breadcrumb: "",
       }
     },
     {

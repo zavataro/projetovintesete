@@ -7,8 +7,8 @@ export default [
     path: "first-page",
     component: FirstPageComponent,
     data: {
-      title: 'First page',
-      breadcrumb: 'First page'
+      title: 'Dashboard',
+      breadcrumb: 'dashboard'
     }
   },
   {

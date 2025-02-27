@@ -49,20 +49,21 @@ export class NavService {
 
   MENUITEMS: Menu[] = [
     {
-      headTitle1: "Pages",
-    },
-    {
       level: 1,
-      title: "Pages",
+      title: "Associados",
       icon: "sample-page",
       type: "sub",
       active: true,
       children: [
-        { path: "/pages/first-page", title: "First Page", type: "link" },
-        { path: "/pages/second-page", title: "Second Page", type: "link" },
+        { path: "/pages/first-page", title: "Dashboard", type: "link" }
       ],
     },
-    { level: 1, path: "/single-page", title: "Single Page", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Financeiro", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Comunicação", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Enquete", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Eleições", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Noticias", icon: "sample-page", type: "link" },
+    { level: 1, path: "/single-page", title: "Calendário", icon: "sample-page", type: "link" },
   ];
 
   items = new BehaviorSubject<Menu[]>(this.MENUITEMS);
