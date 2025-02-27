@@ -1,0 +1,33 @@
+ngx-dropzone {
+    border: 2px dashed $primary-color !important;
+    background-color: rgba($primary-color, 0.1) !important;
+    height: auto !important;
+    padding: 50px;
+    border-radius: 15px !important;
+    i {
+        font-size: 48px !important;
+        color: #009db5;
+    }
+}
+
+ngx-dropzone-label {
+    z-index: 6 !important;
+}
+
+.dz-message {
+    h6 {
+        font-weight: 600;
+        font-size: 16px;
+        color: $dark;
+    }
+    span {
+        font-size: 14px;
+    }
+}
+
+.dz-message {
+    h4 {
+        font-weight: 200;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+<form class="form-inline search-full col" [class.open]="data" (clickOutside)="searchService.outSideClose()">
+  <div class="form-group w-100">
+    <div class="Typeahead Typeahead--twitterUsers">
+      <div class="u-posRelative">
+        <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search yuri .."
+          [(ngModel)]="searchService.text" [ngModelOptions]="{ standalone: true }" (keyup)="searchService.searchTerm(searchService.text)">
+        @if (searchService.menuItems.length) {
+        <div class="Typeahead-menu custom-scrollbar" [class.is-open]="searchService.searchResult" id="search-outer">
+          @for (menuItem of searchService.menuItems | slice : 0 : 8; track menuItem) {
+          <div class="ProfileCard u-cf" [routerLink]="menuItem?.path" (click)="searchService.removeFix()">
+            <div class="ProfileCard-details">
+              <div class="ProfileCard-realName">
+                <app-svg-icons [icons]="menuItem.icon"></app-svg-icons>
+                <a class="realname">{{ menuItem?.title }}</a>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+        }
+        <span (click)="close(data)">
+          <app-feather-icons [class]="'close-search'" [icons]="'x'"></app-feather-icons>
+        </span>
+      </div>
+      <div class="Typeahead-menu is-open" [class.is-open]="searchService.searchResultEmpty"
+        (clickOutside)="searchService.outSideClose()">
+        <div class="tt-dataset tt-dataset-0">
+          <div class="EmptyMessage">Opps!! There are no result found.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

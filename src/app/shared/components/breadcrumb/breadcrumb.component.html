@@ -1,0 +1,16 @@
+<div>
+  <h2>{{title}}</h2>
+  <nav>
+    <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
+      <li class="breadcrumb-item">
+        <a [routerLink]="['/dashboard/default']">Home</a>
+      </li>
+      @if (breadcrumbs.parentBreadcrumb) {
+      <li class="breadcrumb-item f-w-500">{{breadcrumbs.parentBreadcrumb}}</li>
+      }
+      @if (breadcrumbs.childBreadcrumb) {
+      <li class="breadcrumb-item f-w-500 active">{{breadcrumbs.childBreadcrumb}}</li>
+      }
+    </ol>
+  </nav>
+</div>

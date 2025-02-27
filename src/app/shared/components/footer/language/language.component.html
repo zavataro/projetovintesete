@@ -1,0 +1,26 @@
+<ul class="footer-language">
+    <li class="language-nav">
+      <div class="translate_wrapper" [class.active]="isLanguage">
+        <div class="current_lang" (click)="isLanguage =!isLanguage">
+          <div class="lang">
+            <span class="lang-txt f-light f-w-500">{{selectedLanguage.language}}</span>
+            <span class="ms-2">
+              <i class="fa fa-caret-down txt-primary"></i>
+            </span>
+          </div>
+        </div>
+        <div class="more_lang" [class.active]="isLanguage">
+          <span>
+            @for (lang of languages; track lang) {
+            <div class="lang selected" (click)="changeLanguage(lang)">
+              <span class="lang-txt">{{lang.language}}
+                @if (lang.type) {
+                <span>({{lang.type}})</span>
+                }</span>
+            </div>
+            }
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>

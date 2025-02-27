@@ -1,0 +1,58 @@
+<div class="cart-box onhover-click" (click)="isChat = !isChat">
+  <app-common-svg-icons [icons]="'email'"></app-common-svg-icons>
+  <span class="badge rounded-pill badge-danger">2</span>
+</div>
+<div class="onhover-show-div chat-dropdown" [class.active]="isChat">
+  <div class="dropdown-title">
+    <div class="d-flex align-items-center"> <img
+        class="img-fluid img-40 rounded-circle"
+        src="assets/images/dashboard/user/1.jpg" alt="user">
+      <div>
+        <h6 class="f-18 mb-0">Jane Cooper</h6>
+        <p class="mb-0"> <span class="status status-success me-1"></span><span>active</span></p>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li class="send-msg">
+      <div> <img class="img-fluid img-30 rounded-circle"
+          src="assets/images/dashboard/user/1.jpg" alt="user">
+        <div>
+          <p>Hello.how are you?</p>
+        </div>
+      </div>
+    </li>
+    <li class="reply-msg">
+      <div> <img class="img-fluid img-30 rounded-circle"
+          src="assets/images/dashboard/user/3.jpg" alt="user">
+        <div>
+          <p>Hi, i'm fine.what about you?</p>
+        </div>
+      </div>
+    </li>
+    <li class="send-msg">
+      <div> <img class="img-fluid img-30 rounded-circle"
+          src="assets/images/dashboard/user/1.jpg" alt="user">
+        <div>
+          <p>I am facing js issue can you help me?</p>
+        </div>
+      </div>
+    </li>
+    <li class="reply-msg">
+      <div> <img class="img-fluid img-30 rounded-circle"
+          src="assets/images/dashboard/user/3.jpg" alt="user">
+        <div>
+          <p>Sure, i will help you.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="chat-input">
+    <div class="input-group">
+      <input class="form-control" type="text" placeholder="Type message here..."><span
+        class="input-group-text bg-primary">
+        <app-common-svg-icons [icons]="'send'"></app-common-svg-icons>
+      </span>
+    </div>
+  </div>
+</div>

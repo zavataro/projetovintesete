@@ -1,0 +1,31 @@
+<div class="onhover-click">
+  <div class="sidebar-image" (click)="isProfile=!isProfile">
+    <img src="assets/images/user.png" alt="profile">
+    <span class="status status-success"></span>
+  </div>
+  <div class="sidebar-content">
+    <h4>Wade Warren</h4><span class="f-12 f-w-600 f-light">UI Designer</span>
+  </div>
+</div>
+<ul class="profile-dropdown onhover-show-div" [class.active]="isProfile">
+  <li><a [routerLink]="['/authentication/register']">
+      <div class="profile-icon">
+        <app-common-svg-icons [icons]="'user'"></app-common-svg-icons>
+      </div><span>Account </span></a></li>
+  <li><a [routerLink]="['/letter-box']">
+      <div class="profile-icon">
+        <app-common-svg-icons [icons]="'stroke-email'"></app-common-svg-icons>
+      </div><span>Inbox</span></a></li>
+  <li><a [routerLink]="['/tasks']">
+      <div class="profile-icon">
+        <app-common-svg-icons [icons]="'notepad'"></app-common-svg-icons>
+      </div><span>Taskboard</span></a></li>
+  <li><a [routerLink]="['/user/edit-profile']">
+      <div class="profile-icon">
+        <app-common-svg-icons [icons]="'settings'"></app-common-svg-icons>
+      </div><span>Settings</span></a></li>
+  <li><a  (click)="logOut()">
+      <div class="profile-icon">
+        <app-common-svg-icons [icons]="'login'"></app-common-svg-icons>
+      </div><span>Log in </span></a></li>
+</ul>

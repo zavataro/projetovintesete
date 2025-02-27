@@ -1,0 +1,62 @@
+// Spinning Icons
+// --------------------------
+
+.#{$fa-css-prefix}-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.#{$fa-css-prefix}-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@keyframes tada {
+  0% {
+    transform: scaleX(1);
+  }
+  10% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+  30% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  70% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  40% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  60% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  to { 
+    transform: scaleX(1);
+  }
+}
+.tada {
+  animation-name: tada;
+}
+

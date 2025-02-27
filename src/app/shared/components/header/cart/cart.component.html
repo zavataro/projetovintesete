@@ -1,0 +1,40 @@
+ <div class="cart-box onhover-click" (click)="isCart = !isCart">
+  <app-common-svg-icons [icons]="'stroke-ecommerce'"></app-common-svg-icons>
+  <span class="badge rounded-pill badge-primary">2</span>
+</div>
+<div class="cart-dropdown onhover-show-div active" [class.active]="isCart">
+  <h6 class="f-18 mb-0 dropdown-title">Cart</h6>
+  <ul class="cart-main-wrapper">
+    @for (item of cartData; track item) {
+    <li class="cart-product">
+      <div class="d-flex">
+        <img class="img-fluid b-r-5 me-3 img-60" [src]="item.image" alt="cosmetic">
+        <div class="flex-grow-1"><span class="f-w-500">{{item.title}}</span>
+          <div class="qty-box">
+            <div class="touchspin-wrapper">
+              <button class="decrement-touchspin btn-touchspin" (click)="decrement(item.id)"><i class="fa fa-minus text-gray"></i></button>
+              <input class="input-touchspin" id="inputData" type="number" value="{{item.counter}}">
+              <button class="increment-touchspin btn-touchspin"  (click)="increment(item.id)"><i class="fa fa-plus text-gray"></i></button>
+            </div>
+            <h6 class="font-primary">$20 </h6>
+          </div>
+        </div>
+        <div class="close-circle">
+          <a href="javascript:void(0)">
+            <app-feather-icons [icons]="'trash-2'"></app-feather-icons></a></div>
+      </div>
+    </li>
+      }
+    <li class="total">
+      <h6 class="mb-0">Order Total : <span class="f-right">$70.00</span></h6>
+    </li>
+    <li class="text-center">
+      <a class="d-block mb-3 view-cart f-w-700" [routerLink]="['/ecommerce/cart']">Go to your cart</a>
+      <a class="btn btn-primary view-checkout w-100" [routerLink]="['/ecommerce/checkout']">Checkout</a></li>
+  </ul>
+  <div class="cart-empty">
+    <div class="cart-image"> <img class="img-fluid"
+        src="assets/images/product/order-trash.gif" alt="empty"></div>
+    <h5>Oops! Your cart empty!!!</h5>
+  </div>
+</div>
